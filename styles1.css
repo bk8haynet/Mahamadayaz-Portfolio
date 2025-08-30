@@ -863,9 +863,11 @@ section {
 }
 
 .certificate-links {
-  display: flex;
+  display: flex;              /* make it a flex container */
+  justify-content: center;    /* center the items horizontally */
   gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 3.5rem;      /* extra bottom gap before the slider nav */
   flex-wrap: wrap;
 }
 
@@ -919,6 +921,52 @@ section {
 .dot:hover {
   background: var(--main-color);
 }
+
+/* Responsive: Certificates layout on mobile */
+@media (max-width: 768px) {
+  .certificates-container {
+    min-height: auto;         /* avoid extra empty height */
+    padding-bottom: 4rem;     /* reduce spacing */
+  }
+
+  .certificate-slide {
+    flex-direction: column;   /* stack vertically */
+    text-align: center;       /* center text for neat look */
+    gap: 2rem;                /* smaller gap */
+  }
+
+  .certificate-image-container {
+    flex: unset;
+    width: 100%;
+    max-width: 400px;         /* keep image from stretching too wide */
+    margin: 0 auto;
+  }
+
+  .certificate-info {
+    flex: unset;
+    width: 100%;
+  }
+
+  .certificate-title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .certificate-description p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  .slider-nav {
+    position: relative;       /* remove absolute positioning */
+    bottom: unset;
+    left: unset;
+    transform: none;
+    margin-top: 2rem;         /* space below content */
+    justify-content: center;  /* center buttons + dots */
+  }
+}
+
 
 /* Projects Section */
 .projects {
@@ -1039,9 +1087,11 @@ section {
 }
 
 .project-links {
-  display: flex;
+  display: flex;              /* make it a flex container */
+  justify-content: center;    /* center the items horizontally */
   gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 3.5rem;      /* extra bottom gap before the slider nav */
   flex-wrap: wrap;
 }
 

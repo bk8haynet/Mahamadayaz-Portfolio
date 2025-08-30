@@ -150,47 +150,37 @@ document.addEventListener('DOMContentLoaded', () => {
     loadParticles('#ffffff'); // Initial load
 
       // --- Certificates Slider Logic ---
-const certDots = document.querySelectorAll('.slider-dots .dot');
-const nextCertBtn = document.getElementById('next-cert-btn');
-const prevCertBtn = document.getElementById('prev-cert-btn');
+    const certDots = document.querySelectorAll('#certificates .slider-dots .dot');
+    const nextCertBtn = document.getElementById('next-cert-btn');
+    const prevCertBtn = document.getElementById('prev-cert-btn');
 
-
-if (certificateSlides.length > 0) {
+    if (certificateSlides.length > 0) {
     let currentCert = 0;
     let autoCertInterval;
 
-    // Show Certificate
     const showCertificate = (n) => {
         currentCert = (n + certificateSlides.length) % certificateSlides.length;
 
-        // remove active class
         certificateSlides.forEach(slide => slide.classList.remove('active'));
         certDots.forEach(dot => dot.classList.remove('active'));
 
-        // add active class
         certificateSlides[currentCert].classList.add('active');
         certDots[currentCert].classList.add('active');
     };
 
-    // Next / Previous
     const nextCertificate = () => showCertificate(currentCert + 1);
     const prevCertificate = () => showCertificate(currentCert - 1);
 
-    // Auto Slide
     const startAutoCert = () => {
         stopAutoCert();
         autoCertInterval = setInterval(nextCertificate, 5000);
     };
     const stopAutoCert = () => clearInterval(autoCertInterval);
 
-    // Button Events
     if (nextCertBtn) nextCertBtn.addEventListener('click', () => { nextCertificate(); stopAutoCert(); });
     if (prevCertBtn) prevCertBtn.addEventListener('click', () => { prevCertificate(); stopAutoCert(); });
-
-    // Dots Navigation
     certDots.forEach((dot, index) => dot.addEventListener('click', () => { showCertificate(index); stopAutoCert(); }));
 
-    // Auto play only when section visible
     if (certificatesSection) {
         const certObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => entry.isIntersecting ? startAutoCert() : stopAutoCert());
@@ -198,47 +188,50 @@ if (certificateSlides.length > 0) {
         certObserver.observe(certificatesSection);
     }
 
-    // Show first certificate
     showCertificate(0);
 }
 
-    
-
     // --- Project Slider Logic ---
+    const projectDots = document.querySelectorAll('#projects .slider-dots .dot');
+    const nextProjectBtn = document.getElementById('next-project-btn');
+    const prevProjectBtn = document.getElementById('prev-project-btn');
+
     if (projectSlides.length > 0) {
-        let currentSlide = 0;
-        let autoSlideInterval;
+    let currentSlide = 0;
+    let autoSlideInterval;
 
-        const showSlide = (n) => {
-            currentSlide = (n + projectSlides.length) % projectSlides.length;
-            projectSlides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            projectSlides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        };
+    const showSlide = (n) => {
+        currentSlide = (n + projectSlides.length) % projectSlides.length;
 
-        const nextSlide = () => showSlide(currentSlide + 1);
-        const prevSlide = () => showSlide(currentSlide - 1);
+        projectSlides.forEach(slide => slide.classList.remove('active'));
+        projectDots.forEach(dot => dot.classList.remove('active'));
 
-        const startAutoSlide = () => {
-            stopAutoSlide();
-            autoSlideInterval = setInterval(nextSlide, 5000);
-        };
-        const stopAutoSlide = () => clearInterval(autoSlideInterval);
-        
-        if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); stopAutoSlide(); });
-        if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); stopAutoSlide(); });
-        dots.forEach((dot, index) => dot.addEventListener('click', () => { showSlide(index); stopAutoSlide(); }));
-        
-        if (projectsSection) {
-            const projectsObserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => entry.isIntersecting ? startAutoSlide() : stopAutoSlide());
-            }, { threshold: 0.5 });
-            projectsObserver.observe(projectsSection);
-        }
-        
-        showSlide(0); // Show first slide initially
+        projectSlides[currentSlide].classList.add('active');
+        projectDots[currentSlide].classList.add('active');
+    };
+
+    const nextSlide = () => showSlide(currentSlide + 1);
+    const prevSlide = () => showSlide(currentSlide - 1);
+
+    const startAutoSlide = () => {
+        stopAutoSlide();
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    };
+    const stopAutoSlide = () => clearInterval(autoSlideInterval);
+
+    if (nextProjectBtn) nextProjectBtn.addEventListener('click', () => { nextSlide(); stopAutoSlide(); });
+    if (prevProjectBtn) prevProjectBtn.addEventListener('click', () => { prevSlide(); stopAutoSlide(); });
+    projectDots.forEach((dot, index) => dot.addEventListener('click', () => { showSlide(index); stopAutoSlide(); }));
+
+    if (projectsSection) {
+        const projectsObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => entry.isIntersecting ? startAutoSlide() : stopAutoSlide());
+        }, { threshold: 0.5 });
+        projectsObserver.observe(projectsSection);
     }
+
+    showSlide(0);
+}
 
     // --- Smooth Scrolling & Accessibility ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
