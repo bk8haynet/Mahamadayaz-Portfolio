@@ -17,10 +17,10 @@
     <title>Mahamadayaz's Portfolio</title>
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="styles1.css" as="style">
+    <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style">
     
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <!-- Favicon -->
@@ -38,24 +38,24 @@
     <header class="header">
         <a href="#" class="logo">
             <!--<i class="fa-solid fa-code"></i>-->
-            <span>Ayaz's Portfolio</span>
+            <span>Portfolio</span>
         </a>
         <nav class="navbar" role="navigation">
             <a href="#home" class="active" aria-label="Home section">Home</a>
-            <div class="dropdown">
-                <a href="#about" class="dropdown-toggle">About <i class="fa-solid fa-chevron-down"></i></a>
-                <div class="dropdown-menu">
-                    <a href="#about">About Me</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#certificates">Certificates</a>
-                    <a href="#education">Education</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#hobbies">Hobbies</a>
-                </div>
-            </div>
+            <a href="#about" aria-label="About section">About</a>
+            <a href="#skills" aria-label="Skills section">Skills</a>
+            <a href="#certificates" aria-label="Certificates section">Certificates</a>
+            <a href="#education" aria-label="Education section">Education</a>
+            <a href="#experience" aria-label="Experience section">Experience</a>
+            <a href="#hobbies" aria-label="Hobbies section">Hobbies</a>
             <a href="#projects" aria-label="Projects section">Projects</a>
             <a href="#contact" aria-label="Contact section">Contact</a>
         </nav>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div id="menu-icon" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -339,7 +339,6 @@
     </div>
 </section>
 
-
         <!-- Experience Section -->
         <section class="experience" id="experience">
             <h2 class="heading" data-aos="fade-up">Work <span>Experience</span></h2>
@@ -443,39 +442,38 @@
             </div>
         </section>
 
-        <!-- Hobbies Section -->
-<section class="hobbies" id="hobbies">
-    <h2 class="heading">My <span>Hobbies</span></h2>
+            <!-- Hobbies Section -->
+    <section class="hobbies" id="hobbies">
+        <h2 class="heading">My <span>Hobbies</span></h2>
 
-    <div class="skills-container">
-        <div class="skills-box" data-aos="fade-up" data-aos-delay="100">
-            <lord-icon src="https://cdn.lordicon.com/dxoycpzg.json" trigger="hover" colors="primary:#0ef"
-                style="width:100px;height:100px">
-            </lord-icon>
-            <h3>Creative Interests</h3>
-            <p>I love photography, content writing, and blogging about new tech trends and developer tools.</p>
-            <div class="skill-tags">
-                <span class="skill-tag">Photography</span>
-                <span class="skill-tag">Blogging</span>
-                <span class="skill-tag">Writing</span>
+        <div class="skills-container">
+            <div class="skills-box" data-aos="fade-up" data-aos-delay="100">
+                <lord-icon src="https://cdn.lordicon.com/dxoycpzg.json" trigger="hover" colors="primary:#0ef"
+                    style="width:100px;height:100px">
+                </lord-icon>
+                <h3>Creative Interests</h3>
+                <p>I love photography, content writing, and blogging about new tech trends and developer tools.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Photography</span>
+                    <span class="skill-tag">Blogging</span>
+                    <span class="skill-tag">Writing</span>
+                </div>
+            </div>
+
+            <div class="skills-box" data-aos="fade-up" data-aos-delay="200">
+                <lord-icon src="https://cdn.lordicon.com/mdgrhyca.json" trigger="hover" colors="primary:#0ef"
+                    style="width:100px;height:100px">
+                </lord-icon>
+                <h3>Leisure Activities</h3>
+                <p>In my free time, I enjoy playing strategy games, watching documentaries, and exploring new coding tools or frameworks.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Gaming</span>
+                    <span class="skill-tag">Documentaries</span>
+                    <span class="skill-tag">Exploring Tools</span>
+                </div>
             </div>
         </div>
-
-        <div class="skills-box" data-aos="fade-up" data-aos-delay="200">
-            <lord-icon src="https://cdn.lordicon.com/mdgrhyca.json" trigger="hover" colors="primary:#0ef"
-                style="width:100px;height:100px">
-            </lord-icon>
-            <h3>Leisure Activities</h3>
-            <p>In my free time, I enjoy playing strategy games, watching documentaries, and exploring new coding tools or frameworks.</p>
-            <div class="skill-tags">
-                <span class="skill-tag">Gaming</span>
-                <span class="skill-tag">Documentaries</span>
-                <span class="skill-tag">Exploring Tools</span>
-            </div>
-        </div>
-    </div>
-</section>
-
+    </section>
 
         <!-- Projects Section -->
         <section class="projects" id="projects">
@@ -711,7 +709,7 @@
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="script1.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

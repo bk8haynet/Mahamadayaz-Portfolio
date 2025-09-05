@@ -85,10 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
    // --- Mobile Menu Toggle ---
     if (menuIcon) {
         menuIcon.onclick = () => {
-            menuIcon.classList.toggle('bx-x');
-            navbar.classList.toggle('active');
-        };
-    } 
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+      };
+    }
+  
 
     // --- Typed.js for Typing Animation ---
     if (typedElement) {
@@ -172,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevCertificate = () => showCertificate(currentCert - 1);
 
     const startAutoCert = () => {
-        stopAutoCert();
+        stopAutoCert(); t
         autoCertInterval = setInterval(nextCertificate, 5000);
     };
     const stopAutoCert = () => clearInterval(autoCertInterval);

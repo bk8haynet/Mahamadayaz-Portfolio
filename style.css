@@ -587,6 +587,68 @@ section {
   transform: translateY(-3px);
 }
 
+/* Navbar Default */
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Hamburger icon hidden on desktop */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: #111;
+        width: 200px;
+        padding: 1rem;
+        transition: 0.3s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
+/* Fix navbar sliding issue */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -220px; /* move just outside viewport */
+        flex-direction: column;
+        background: #111;
+        width: 200px;
+        padding: 1rem;
+        transition: right 0.3s ease-in-out;
+        height: calc(100vh - 70px); /* full height menu */
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+}
+
+
+
 /* About Section */
 .about {
   display: flex;
